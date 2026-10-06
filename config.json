@@ -1,0 +1,4552 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "cache.db",
+      "cache_id": "singbox_dashax",
+      "store_fakeip": true
+    }
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30",
+        "fd00::1/126"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 1080,
+      "sniff": true,
+      "sniff_override_destination": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/524S2SPAeQGmKV9rViHNJxwf90kh2Srr?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cZ1bx9Iak0hKw4J21J9dyMXjqXvv7j6y?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/I4hcE7aEKnbbeM3mWe8YMOAeKWr7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "uuid": "400fc603-3c83-4758-82e9-70ae0aacbfda",
+      "flow": "",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/JcjTuLnns9dI4vP4hFF76f0WHda7?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZqW0rT-pG3FLPzA3C01G4.AMIRREzaEsMAILzADeh2017.WoRkERs.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/TRK3YajwW42WCsjJFxDY54vM4Oylm2?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1zqw0rT-pG3flpZa3C01g4.AMirREZaEsmAILzADEh2017.WorkerS.DeV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/m8DI1okbPsoAIcvlCnt5lhqRX?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1Zqw0Rt-pG3FLPZA3c01G4.AMIrrEzAeSMaIlzADEH2017.WoRkERS.deV",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/VNJOveJjmkjRb2nCQOFn6CWfP5v?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.166.12",
+      "server_port": 443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.253.201",
+      "server_port": 8443,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.17.100.81",
+      "server_port": 2096,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.25.255.97",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.5.102",
+      "server_port": 2083,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "دریدش",
+      "server": "104.21.46.31",
+      "server_port": 2087,
+      "password": "!weLxMsWONSWx%3B_z",
+      "tls": {
+        "enabled": true,
+        "server_name": "1ZQw0Rt-pg3Flpza3c01G4.AMIrREzAesmAiLzAdeH2017.WoRKERS.dEv",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "unsafe"
+        },
+        "alpn": [
+          "http/1.1"
+        ],
+        "cipher_suites": [
+          "TLS_AES_256_GCM_SHA384",
+          "TLS_CHACHA20_POLY1305_SHA256",
+          "TLS_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+          "TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA",
+          "TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256",
+          "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"
+        ],
+        "finalMask": {
+          "tcp": [
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "tlshello",
+                "lengths": [
+                  "0",
+                  "104",
+                  "1"
+                ],
+                "delays": [
+                  "0"
+                ],
+                "maxSplit": "0"
+              }
+            },
+            {
+              "type": "fragment",
+              "settings": {
+                "packets": "1-1",
+                "lengths": [
+                  "114",
+                  "1"
+                ],
+                "delays": [
+                  "1"
+                ],
+                "maxSplit": "11"
+              }
+            }
+          ]
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tr/F3Uosso9cMte79UiSBNeDeQA?ed=2560",
+        "headers": {
+          "Host": "1zqw0rt-pg3flpza3c01g4.amirrezaesmailzadeh2017.workers.dev"
+        },
+        "fragment": {
+          "enabled": true,
+          "packets": [
+            "tlshello",
+            "1-1"
+          ],
+          "lengths": [
+            "0",
+            "104",
+            "1",
+            "114",
+            "1"
+          ],
+          "delays": [
+            "0",
+            "1"
+          ],
+          "max_split": 11
+        }
+      }
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "freedom",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "protocol": "dns",
+        "outbound": "📡 DNS"
+      },
+      {
+        "outbound": "🔀 Selector"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "🔀 Selector"
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "https://dns.google/dns-query",
+        "strategy": "ipv4_first",
+        "detour": "🔀 Selector"
+      },
+      {
+        "tag": "cloudflare",
+        "address": "https://cloudflare-dns.com/dns-query",
+        "strategy": "ipv4_first",
+        "detour": "🔀 Selector"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "📡 DNS",
+        "server": "google"
+      }
+    ],
+    "strategy": "ipv4_first",
+    "final": "google"
+  },
+  "routing": {
+    "rules": [
+      {
+        "outbound": "dns-out",
+        "network": "udp",
+        "port": 53
+      },
+      {
+        "outbound": "direct",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.88.99.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "224.0.0.0/4",
+          "255.255.255.255/32"
+        ]
+      }
+    ],
+    "final": "direct"
+  }
+}
